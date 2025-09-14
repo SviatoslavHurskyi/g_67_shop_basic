@@ -11,11 +11,22 @@ public class Customer {
     private boolean active;
     private List<Product> cart = new ArrayList<>();
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return active == customer.active && Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(cart, customer.cart);
+        return active == customer.active
+                && Objects.equals(id, customer.id)
+                && Objects.equals(name, customer.name)
+                && Objects.equals(cart, customer.cart);
     }
 
     @Override
