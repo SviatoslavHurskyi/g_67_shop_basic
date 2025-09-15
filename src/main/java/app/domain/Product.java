@@ -17,6 +17,22 @@ public class Product {
         return id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
