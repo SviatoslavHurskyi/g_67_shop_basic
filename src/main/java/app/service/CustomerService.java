@@ -65,7 +65,7 @@ public class CustomerService {
     }
 
     //    Удалить покупателя из базы данных по его имени.
-    public void deleteBzName(String name) {
+    public void deleteByName(String name) {
         getAllActiveCustomers()
                 .stream()
                 .filter(x -> x.getName().equals(name))
@@ -117,7 +117,7 @@ public class CustomerService {
     }
 
     //    Удалить товар из корзины покупателя по их идентификаторам
-    public void removeProductFromCustomerCart(Long customerId, Long productId) {
+    public void removeProductFromCustomersCart(Long customerId, Long productId) {
         //Подход 1. Удаление всех продуктов одного наименования из корзины.
 //        Customer customer = getActiveCustomerById(customerId);
 //        customer.getCart().removeIf(x -> x.getId().equals(productId));
